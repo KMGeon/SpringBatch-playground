@@ -7,6 +7,10 @@ spring:
   batch:
     jdbc:
       initialize-schema: always
+#      table-prefix: geon_
+    #     enabled는 기본적으로 true , false로 바꾸면 스프링 실행할 때 수행하지 않는다.
+    job:
+      enabled: false
 #    job:
 #      name: 'job'
 #      enabled: true
