@@ -3,9 +3,9 @@
 //import org.springframework.batch.core.*;
 //import org.springframework.batch.core.job.builder.JobBuilder;
 //import org.springframework.batch.core.launch.JobLauncher;
+//import org.springframework.batch.core.launch.support.RunIdIncrementer;
 //import org.springframework.batch.core.repository.JobRepository;
 //import org.springframework.batch.core.step.builder.StepBuilder;
-//import org.springframework.batch.core.step.tasklet.Tasklet;
 //import org.springframework.batch.repeat.RepeatStatus;
 //import org.springframework.boot.ApplicationArguments;
 //import org.springframework.boot.ApplicationRunner;
@@ -18,7 +18,7 @@
 //
 //@Configuration
 //@Component
-//public class Step3_1 {
+//public class Step3_3 {
 //
 //
 //    @Bean
@@ -26,7 +26,7 @@
 //        return new ApplicationRunner() {
 //            @Override
 //            public void run(ApplicationArguments args) throws Exception {
-//                Step3_1 step31 = new Step3_1();
+//                Step3_3 step31 = new Step3_3();
 //                jobLauncher.run(job, new JobParametersBuilder()
 //                        .addString("UUID", UUID.randomUUID().toString())
 //                        .toJobParameters());
@@ -40,10 +40,30 @@
 //
 //    @Bean
 //    Job job(JobRepository jobRepository, Step step1, Step step2) {
-//
 //        return new JobBuilder("job1", jobRepository)
-//                .start(step1) // 처음 실행 할 Step
-//                .next(step2) // 다음에 실행할 Step
+//                .start(step1) /* simplejobBuilder */
+//                .next(step2)
+//                .incrementer(new RunIdIncrementer())
+//                .validator(new JobParametersValidator() {
+//                    @Override
+//                    public void validate(JobParameters parameters) throws JobParametersInvalidException {
+//
+//                    }
+//                })
+//                .preventRestart()
+//                .listener(
+//                        new JobExecutionListener() {
+//                            @Override
+//                            public void beforeJob(JobExecution jobExecution) {
+//                                JobExecutionListener.super.beforeJob(jobExecution);
+//                            }
+//
+//                            @Override
+//                            public void afterJob(JobExecution jobExecution) {
+//                                JobExecutionListener.super.afterJob(jobExecution);
+//                            }
+//                        }
+//                )
 //                .build();
 //    }
 //
@@ -62,6 +82,10 @@
 //    Step step2(JobRepository jobRepository, PlatformTransactionManager transactionManager) {
 //        return new StepBuilder("step2", jobRepository)
 //                .tasklet((contribution, chunkContext) -> {
+//
+//                    chunkContext.getStepContext().getStepExecution().setStatus(BatchStatus.FAILED);
+//                    contribution.setExitStatus(ExitStatus.STOPPED);
+//
 //                    System.out.println("step2 was excuted!");
 //                    return RepeatStatus.FINISHED;
 //                }, transactionManager)

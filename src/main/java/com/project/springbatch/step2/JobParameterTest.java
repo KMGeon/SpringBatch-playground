@@ -10,7 +10,7 @@
 //import org.springframework.stereotype.Component;
 //
 //@Component
-//public class JobParameterTest implements ApplicationRunner{
+//public class JobParameterTest implements ApplicationRunner {
 //
 //    @Autowired
 //    private JobLauncher jobLauncher;
@@ -21,12 +21,7 @@
 //    @Override
 //    public void run(ApplicationArguments args) throws Exception {
 //        JobParameters params = new JobParametersBuilder()
-////                .addString("UUID", UUID.randomUUID().toString())
-//                .addString("string", "name1")
-////                .addLocalDate("localdate", LocalDate.now())
-////                .addDate("date", new Date())
-////                .addLocalDateTime("LocalDateTime", LocalDateTime.now())
-//                .addDouble("double", 1.5)
+//                .addString("name", "name")
 //                .toJobParameters();
 //
 //        jobLauncher.run(job, params);
