@@ -49,8 +49,8 @@ public class BatchConfig{
      *     2. application.yml 에서 spring.batch.job.enabled 속성이 true이거나 설정되지 않았을 때 등록됨
      */
     @Bean
-//    @ConditionalOnMissingBean
-//    @ConditionalOnProperty(prefix = "spring.batch.job", name = "enabled", havingValue = "true", matchIfMissing = true)
+    @ConditionalOnMissingBean
+    @ConditionalOnProperty(prefix = "spring.batch.job", name = "enabled", havingValue = "true", matchIfMissing = true)
     public JobLauncherApplicationRunner jobLauncherApplicationRunner(JobLauncher jobLauncher, JobExplorer jobExplorer,
                                                                      JobRepository jobRepository, BatchProperties properties) {
         /**

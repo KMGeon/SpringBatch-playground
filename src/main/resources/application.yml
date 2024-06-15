@@ -9,14 +9,19 @@ spring:
   batch:
     jdbc:
       initialize-schema: always
+    job:
+      name: 'batchJob'
+      enabled: true
 
 
-#      table-prefix: geon_
+    #        job:
+#          name: 'parentJob'
+#          enabled: false
+
+
+    #      table-prefix: geon_
     #     enabled는 기본적으로 true , false로 바꾸면 스프링 실행할 때 수행하지 않는다.
   jpa:
     open-in-view: false
 #    job:
 #      enabled: false
-#    job:
-#      name: 'job'
-#      enabled: true
