@@ -34,6 +34,9 @@ public class Chunk3 {
      *  처음에 0~6에서 chunk size가 2 이기 때문에
      *  {0,1} , {2,3} , {4,5} ,{6}
      *
+     *  // 01, write update, 23, exception이 발생한다.
+     *   청크 단위로 처리하기 때문에 index가 6인 5가 exception을 처리한다.
+     *
      */
     @Bean
     public Job job(JobRepository jobRepository, PlatformTransactionManager transactionManager) {
