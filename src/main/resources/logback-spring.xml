@@ -1,0 +1,48 @@
+<configuration>
+    <property name="logPath" value="logs" />
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+<!--        <filter class="com.tbnws.gtgear.support.tbnws_admin_back.config.LogbackFilter"/>-->
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>
+                %d{yyyy-MM-dd HH:mm:ss} [%-5level] [%X{transactionId}] %msg%n
+            </Pattern>
+        </layout>
+    </appender>
+
+    <appender name="FILE-AUDIT" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>
+            ${logPath}/tbnws_admin_back.log
+        </file>
+
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <Pattern>
+                %d{yyyy-MM-dd HH:mm:ss} [%-5level] [%X{transactionId}] %msg%n
+            </Pattern>
+        </encoder>
+
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+<!--            <filter class="com.tbnws.gtgear.support.tbnws_admin_back.config.LogbackFilter"/>-->
+            <fileNamePattern>
+                ${logPath}/archived/tbnws_admin_back.log.%d{yyyy-MM-dd}.%i
+            </fileNamePattern>
+            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>
+                    50MB
+                </maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+    </appender>
+
+    <root level="info">
+        <appender-ref ref="FILE-AUDIT" />
+        <appender-ref ref="STDOUT" />
+    </root>
+
+    <logger name="jdbc.sqlonly"        level="OFF"/>
+    <logger name="jdbc.sqltiming"      level="INFO"/>
+    <logger name="jdbc.audit"          level="OFF"/>
+    <logger name="jdbc.resultset"      level="OFF"/>
+    <logger name="jdbc.resultsettable" level="OFF"/>
+    <logger name="jdbc.connection"     level="OFF"/>
+</configuration>
