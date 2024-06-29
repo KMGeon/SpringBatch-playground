@@ -10,7 +10,7 @@ spring:
     jdbc:
       initialize-schema: always
     job:
-      name: 'batchJob'
+      name: 'itemReader'
       enabled: true
     #      table-prefix: geon_
     #     enabled는 기본적으로 true , false로 바꾸면 스프링 실행할 때 수행하지 않는다.
@@ -37,7 +37,6 @@ management:
   endpoint:
     health:
       show-details: always
-  #      show-components: always
   endpoints:
     web:
       exposure:
