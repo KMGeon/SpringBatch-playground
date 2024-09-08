@@ -7,14 +7,17 @@ import org.springframework.validation.BindException;
 public class CustomerFieldSetMapper implements FieldSetMapper<Customer> {
 
     @Override
-    public Customer mapFieldSet(FieldSet fieldSet) throws BindException {
+    public Customer mapFieldSet(FieldSet fs) throws BindException {
 
-        if (fieldSet == null) return  null;
+        if (fs == null) return  null;
 
         Customer customer = new Customer();
-        customer.setName(fieldSet.readString(0));
-        customer.setAge(fieldSet.readInt(1));
-        customer.setYear(fieldSet.readString(2));  // year is at index 2
+//        customer.setName(fs.readString(0));
+//        customer.setAge(fs.readInt(1));
+//        customer.setYear(fs.readString(2));
+        customer.setName(fs.readString("name"));
+        customer.setAge(fs.readInt("age"));
+        customer.setYear(fs.readString("year"));
 
         return customer;
     }

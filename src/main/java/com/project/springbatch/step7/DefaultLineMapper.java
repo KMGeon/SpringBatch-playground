@@ -4,7 +4,9 @@ import org.springframework.batch.item.file.LineMapper;
 import org.springframework.batch.item.file.mapping.FieldSetMapper;
 import org.springframework.batch.item.file.transform.LineTokenizer;
 
-
+/**
+ *  LineMapper
+ */
 public class DefaultLineMapper<T> implements LineMapper<T> {
 
     private LineTokenizer lineTokenizer;
