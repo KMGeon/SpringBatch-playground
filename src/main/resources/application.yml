@@ -10,7 +10,7 @@ spring:
     jdbc:
       initialize-schema: always
     job:
-      name: 'itemReader'
+      name: 'batchJob'
       enabled: true
     #      table-prefix: geon_
     #     enabled는 기본적으로 true , false로 바꾸면 스프링 실행할 때 수행하지 않는다.
@@ -52,3 +52,6 @@ info:
   app:
     name: hello-actuator
     company: yh
+
+
+# 수정하고

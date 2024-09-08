@@ -2,7 +2,6 @@
     <property name="logPath" value="logs" />
 
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
-<!--        <filter class="com.tbnws.gtgear.support.tbnws_admin_back.config.LogbackFilter"/>-->
         <layout class="ch.qos.logback.classic.PatternLayout">
             <Pattern>
                 %d{yyyy-MM-dd HH:mm:ss} [%-5level] [%X{transactionId}] %msg%n
@@ -22,9 +21,8 @@
         </encoder>
 
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-<!--            <filter class="com.tbnws.gtgear.support.tbnws_admin_back.config.LogbackFilter"/>-->
             <fileNamePattern>
-                ${logPath}/archived/tbnws_admin_back.log.%d{yyyy-MM-dd}.%i
+                ${logPath}/archived/spring.log.%d{yyyy-MM-dd}.%i
             </fileNamePattern>
             <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
                 <maxFileSize>
