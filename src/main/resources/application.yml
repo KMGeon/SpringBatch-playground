@@ -1,31 +1,16 @@
 spring:
-  main:
-    allow-bean-definition-overriding: true
   datasource:
-      url: jdbc:mysql://localhost:3306/KMG?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
-      username: root
-      password: 1234
-      driver-class-name: com.mysql.cj.jdbc.Driver
+    # jdbc:log4jdbc:mysql://localhost:3306/KMG?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+    jdbc-url: jdbc:log4jdbc:mysql://localhost:3306/KMG?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+    username: root
+    password: 1234
+    driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
   batch:
     jdbc:
-      initialize-schema: always
+      initialize-schema: never
     job:
       name: 'batchJob'
       enabled: true
-    #      table-prefix: geon_
-    #     enabled는 기본적으로 true , false로 바꾸면 스프링 실행할 때 수행하지 않는다.
-  jpa:
-    hibernate:
-      ddl-auto: create
-    properties:
-      hibernate:
-        show_sql: true
-        format_sql: true
-        default_batch_fetch_size: 100
-    open-in-view: false
-#    job:
-#      enabled: false
-
 management:
   info:
     java:
@@ -42,16 +27,65 @@ management:
       exposure:
         include: "*"
 
-
-
-#  server:
-#    port: 9292
-
-# info에 추가하고 싶은 정보
 info:
   app:
     name: hello-actuator
     company: yh
 
-
-# 수정하고
+#spring:
+#  main:
+#    allow-bean-definition-overriding: true
+#  datasource:
+#      url: jdbc:mysql://localhost:3306/KMG?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+#      username: root
+#      password: 1234
+#      driver-class-name: com.mysql.cj.jdbc.Driver
+#  batch:
+#    jdbc:
+#      initialize-schema: always
+#    job:
+#      name: 'batchJob'
+#      enabled: true
+#    #      table-prefix: geon_
+#    #     enabled는 기본적으로 true , false로 바꾸면 스프링 실행할 때 수행하지 않는다.
+#  jpa:
+#    hibernate:
+#      ddl-auto: create
+#    properties:
+#      hibernate:
+#        show_sql: true
+#        format_sql: true
+#        default_batch_fetch_size: 100
+#    open-in-view: false
+##    job:
+##      enabled: false
+#
+#management:
+#  info:
+#    java:
+#      enabled: true
+#    os:
+#      enabled: true
+#    env:
+#      enabled: true
+#  endpoint:
+#    health:
+#      show-details: always
+#  endpoints:
+#    web:
+#      exposure:
+#        include: "*"
+#
+#
+#
+##  server:
+##    port: 9292
+#
+## info에 추가하고 싶은 정보
+#info:
+#  app:
+#    name: hello-actuator
+#    company: yh
+#
+#
+## 수정하고

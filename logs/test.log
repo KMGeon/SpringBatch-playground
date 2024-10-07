@@ -1,0 +1,355 @@
+2024-10-07 15:53:15 [INFO ] [] [] Starting SpringBatchApplication using Java 17.0.9 with PID 13449 (/Users/mugeon/IdeaProjects/spring-batch/build/classes/java/main started by mugeon in /Users/mugeon/IdeaProjects/spring-batch)
+2024-10-07 15:53:15 [INFO ] [] [] No active profile set, falling back to 1 default profile: "default"
+2024-10-07 15:53:16 [WARN ] [] [] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'job' defined in class path resource [com/project/springbatch/step9/CompositeItemProcessor/CompositeItemProcessor.class]: Cannot register bean definition [Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=compositeItemProcessor; factoryMethodName=job; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [com/project/springbatch/step9/CompositeItemProcessor/CompositeItemProcessor.class]] for bean 'job' since there is already [Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=classifierConfiguration; factoryMethodName=job; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [com/project/springbatch/step9/ClassifierCompositeItemProcessor/ClassifierConfiguration.class]] bound.
+2024-10-07 15:53:16 [INFO ] [] [] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-10-07 15:53:16 [ERROR] [] [] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'job', defined in class path resource [com/project/springbatch/step9/CompositeItemProcessor/CompositeItemProcessor.class], could not be registered. A bean with that name has already been defined in class path resource [com/project/springbatch/step9/ClassifierCompositeItemProcessor/ClassifierConfiguration.class] and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+
+2024-10-07 15:53:23 [INFO ] [] [] Starting SpringBatchApplication using Java 17.0.9 with PID 13463 (/Users/mugeon/IdeaProjects/spring-batch/build/classes/java/main started by mugeon in /Users/mugeon/IdeaProjects/spring-batch)
+2024-10-07 15:53:23 [INFO ] [] [] No active profile set, falling back to 1 default profile: "default"
+2024-10-07 15:53:23 [INFO ] [] [] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-07 15:53:23 [INFO ] [] [] Finished Spring Data repository scanning in 4 ms. Found 0 JPA repository interfaces.
+2024-10-07 15:53:23 [WARN ] [] [] No MyBatis mapper was found in '[com.project.springbatch]' package. Please check your configuration.
+2024-10-07 15:53:23 [WARN ] [] [] Bean 'batchConfig' of type [com.project.springbatch.BatchConfig$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [jobRegistryBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-10-07 15:53:23 [WARN ] [] [] Bean 'dataSource' of type [com.zaxxer.hikari.HikariDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [jobRegistryBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-10-07 15:53:23 [WARN ] [] [] Bean 'transactionManager' of type [org.springframework.jdbc.datasource.DataSourceTransactionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [jobRegistryBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-10-07 15:53:23 [WARN ] [] [] Bean 'spring.batch-org.springframework.boot.autoconfigure.batch.BatchProperties' of type [org.springframework.boot.autoconfigure.batch.BatchProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [jobRegistryBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-10-07 15:53:23 [WARN ] [] [] Bean 'org.springframework.boot.autoconfigure.batch.BatchAutoConfiguration$SpringBootBatchConfiguration' of type [org.springframework.boot.autoconfigure.batch.BatchAutoConfiguration$SpringBootBatchConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [jobRegistryBeanPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-10-07 15:53:23 [INFO ] [] [] Tomcat initialized with port 8080 (http)
+2024-10-07 15:53:23 [INFO ] [] [] Initializing ProtocolHandler ["http-nio-8080"]
+2024-10-07 15:53:23 [INFO ] [] [] Starting service [Tomcat]
+2024-10-07 15:53:23 [INFO ] [] [] Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-10-07 15:53:23 [INFO ] [] [] Initializing Spring embedded WebApplicationContext
+2024-10-07 15:53:23 [INFO ] [] [] Root WebApplicationContext: initialization completed in 767 ms
+2024-10-07 15:53:24 [INFO ] [] [] HikariPool-1 - Starting...
+2024-10-07 15:53:24 [INFO ] [] [] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@17003497
+2024-10-07 15:53:24 [INFO ] [] [] HikariPool-1 - Start completed.
+2024-10-07 15:53:24 [INFO ] [] [] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-07 15:53:24 [INFO ] [] [] HHH000412: Hibernate ORM core version 6.4.8.Final
+2024-10-07 15:53:24 [INFO ] [] [] HHH000026: Second-level cache disabled
+2024-10-07 15:53:24 [INFO ] [] [] No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-07 15:53:24 [INFO ] [] [] SELECT @@character_set_database, @@sql_mode
+ {executed in 2 msec}
+2024-10-07 15:53:24 [INFO ] [] [] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-07 15:53:24 [INFO ] [] [] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-07 15:53:25 [WARN ] [] [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-07 15:53:25 [INFO ] [] [] Exposing 14 endpoint(s) beneath base path '/actuator'
+2024-10-07 15:53:25 [INFO ] [] [] Starting ProtocolHandler ["http-nio-8080"]
+2024-10-07 15:53:25 [INFO ] [] [] Tomcat started on port 8080 (http) with context path ''
+2024-10-07 15:53:25 [INFO ] [] [] Started SpringBatchApplication in 2.577 seconds (process running for 2.795)
+2024-10-07 15:53:25 [INFO ] [] [] Running default command line with: []
+2024-10-07 15:53:25 [INFO ] [] [] SELECT JOB_INSTANCE_ID, JOB_NAME
+FROM BATCH_JOB_INSTANCE
+WHERE JOB_NAME = 'batchJob'
+ and JOB_KEY = 'd41d8cd98f00b204e9800998ecf8427e'
+ {executed in 6 msec}
+2024-10-07 15:53:25 [INFO ] [] [] SELECT JOB_INSTANCE_ID, JOB_NAME
+FROM BATCH_JOB_INSTANCE I1
+WHERE I1.JOB_NAME = 'batchJob' AND I1.JOB_INSTANCE_ID = (SELECT MAX(I2.JOB_INSTANCE_ID) FROM BATCH_JOB_INSTANCE I2 WHERE I2.JOB_NAME = 'batchJob')
+ {executed in 11 msec}
+2024-10-07 15:53:25 [INFO ] [] [] SELECT JOB_EXECUTION_ID, START_TIME, END_TIME, STATUS, EXIT_CODE, EXIT_MESSAGE, CREATE_TIME, LAST_UPDATED, VERSION
+FROM BATCH_JOB_EXECUTION E
+WHERE JOB_INSTANCE_ID = 162 AND JOB_EXECUTION_ID IN (SELECT MAX(JOB_EXECUTION_ID) FROM BATCH_JOB_EXECUTION E2 WHERE E2.JOB_INSTANCE_ID = 162)
+ {executed in 6 msec}
+2024-10-07 15:53:25 [INFO ] [] [] SELECT JOB_EXECUTION_ID, PARAMETER_NAME, PARAMETER_TYPE, PARAMETER_VALUE, IDENTIFYING
+FROM BATCH_JOB_EXECUTION_PARAMS
+WHERE JOB_EXECUTION_ID = 162
+ {executed in 4 msec}
+2024-10-07 15:53:25 [INFO ] [] [] SELECT JI.JOB_INSTANCE_ID, JOB_NAME, JOB_KEY, JI.VERSION
+FROM BATCH_JOB_INSTANCE JI, BATCH_JOB_EXECUTION JE
+WHERE JOB_EXECUTION_ID = 162 AND JI.JOB_INSTANCE_ID = JE.JOB_INSTANCE_ID
+ {executed in 5 msec}
+2024-10-07 15:53:25 [INFO ] [] [] SELECT STEP_EXECUTION_ID, STEP_NAME, START_TIME, END_TIME, STATUS, COMMIT_COUNT, READ_COUNT, FILTER_COUNT, WRITE_COUNT, EXIT_CODE, EXIT_MESSAGE, READ_SKIP_COUNT, WRITE_SKIP_COUNT, PROCESS_SKIP_COUNT, ROLLBACK_COUNT, LAST_UPDATED, VERSION, CREATE_TIME
+FROM BATCH_STEP_EXECUTION
+WHERE JOB_EXECUTION_ID = 162
+ ORDER BY STEP_EXECUTION_ID
+ {executed in 6 msec}
+2024-10-07 15:53:25 [INFO ] [] [] SELECT SHORT_CONTEXT, SERIALIZED_CONTEXT
+FROM BATCH_JOB_EXECUTION_CONTEXT
+WHERE JOB_EXECUTION_ID = 162
+ {executed in 6 msec}
+2024-10-07 15:53:25 [INFO ] [] [] SELECT SHORT_CONTEXT, SERIALIZED_CONTEXT
+FROM BATCH_STEP_EXECUTION_CONTEXT
+WHERE STEP_EXECUTION_ID = 162
+ {executed in 3 msec}
+2024-10-07 15:53:25 [INFO ] [] [] SELECT JOB_INSTANCE_ID, JOB_NAME
+FROM BATCH_JOB_INSTANCE
+WHERE JOB_NAME = 'batchJob'
+ and JOB_KEY = 'd1bb974eda3a644ace19b0b5b128b3cf'
+ {executed in 3 msec}
+2024-10-07 15:53:25 [INFO ] [] [] SELECT JOB_INSTANCE_ID, JOB_NAME
+FROM BATCH_JOB_INSTANCE
+WHERE JOB_NAME = 'batchJob'
+ and JOB_KEY = 'd1bb974eda3a644ace19b0b5b128b3cf'
+ {executed in 2 msec}
+2024-10-07 15:53:25 [INFO ] [] [] SELECT JOB_INSTANCE_ID, JOB_NAME
+FROM BATCH_JOB_INSTANCE
+WHERE JOB_NAME = 'batchJob'
+ and JOB_KEY = 'd1bb974eda3a644ace19b0b5b128b3cf'
+ {executed in 2 msec}
+2024-10-07 15:53:25 [INFO ] [] [] update BATCH_JOB_SEQ set ID = last_insert_id(ID + 1) limit 1
+ {executed in 5 msec}
+2024-10-07 15:53:25 [INFO ] [] [] select last_insert_id()
+ {executed in 2 msec}
+2024-10-07 15:53:25 [INFO ] [] [] INSERT INTO BATCH_JOB_INSTANCE(JOB_INSTANCE_ID, JOB_NAME, JOB_KEY, VERSION)
+	VALUES (163, 'batchJob', 'd1bb974eda3a644ace19b0b5b128b3cf', 0)
+ {executed in 4 msec}
+2024-10-07 15:53:25 [INFO ] [] [] update BATCH_JOB_EXECUTION_SEQ set ID = last_insert_id(ID + 1) limit 1
+ {executed in 3 msec}
+2024-10-07 15:53:25 [INFO ] [] [] select last_insert_id()
+ {executed in 2 msec}
+2024-10-07 15:53:25 [INFO ] [] [] INSERT INTO BATCH_JOB_EXECUTION(JOB_EXECUTION_ID, JOB_INSTANCE_ID, START_TIME, END_TIME, STATUS, EXIT_CODE, EXIT_MESSAGE, VERSION, CREATE_TIME, LAST_UPDATED)
+	VALUES (163, 163, NULL, NULL, 'STARTING', 'UNKNOWN', '', 0, '10/07/2024 15:53:25.645', '10/07/2024 15:53:25.645')
+ {executed in 6 msec}
+2024-10-07 15:53:25 [INFO ] [] [] batching 2 statements:
+1:  INSERT INTO BATCH_JOB_EXECUTION_PARAMS(JOB_EXECUTION_ID, PARAMETER_NAME, PARAMETER_TYPE, PARAMETER_VALUE, IDENTIFYING)
+	VALUES (163, 'UUID', 'java.lang.String', '810af702-aeab-4c74-baf3-8da47a153dbd', 'Y')
+
+2:  INSERT INTO BATCH_JOB_EXECUTION_PARAMS(JOB_EXECUTION_ID, PARAMETER_NAME, PARAMETER_TYPE, PARAMETER_VALUE, IDENTIFYING)
+	VALUES (163, 'run.id', 'java.lang.Long', '1', 'Y')
+ {executed in 7 msec}
+2024-10-07 15:53:25 [INFO ] [] [] INSERT INTO BATCH_JOB_EXECUTION_CONTEXT (SHORT_CONTEXT, SERIALIZED_CONTEXT, JOB_EXECUTION_ID)
+	VALUES('rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVzaG9sZHhwP0AAAAAAAAB3CAAAABAAAAAAeA==', NULL, 163)
+ {executed in 1 msec}
+2024-10-07 15:53:25 [INFO ] [] [] Job: [SimpleJob: [name=batchJob]] launched with the following parameters: [{'UUID':'{value=810af702-aeab-4c74-baf3-8da47a153dbd, type=class java.lang.String, identifying=true}','run.id':'{value=1, type=class java.lang.Long, identifying=true}'}]
+2024-10-07 15:53:25 [INFO ] [] [] SELECT VERSION
+FROM BATCH_JOB_EXECUTION
+WHERE JOB_EXECUTION_ID=163
+ {executed in 2 msec}
+2024-10-07 15:53:25 [INFO ] [] [] SELECT COUNT(*)
+FROM BATCH_JOB_EXECUTION
+WHERE JOB_EXECUTION_ID = 163
+ {executed in 2 msec}
+2024-10-07 15:53:25 [INFO ] [] [] UPDATE BATCH_JOB_EXECUTION
+SET START_TIME = '10/07/2024 15:53:25.685', END_TIME = NULL,  STATUS = 'STARTED', EXIT_CODE = 'UNKNOWN', EXIT_MESSAGE = '', VERSION = 1, CREATE_TIME = '10/07/2024 15:53:25.645', LAST_UPDATED = '10/07/2024 15:53:25.686'
+WHERE JOB_EXECUTION_ID = 163 AND VERSION = 0
+ {executed in 4 msec}
+2024-10-07 15:53:25 [INFO ] [] [] SELECT SE.STEP_EXECUTION_ID, SE.STEP_NAME, SE.START_TIME, SE.END_TIME, SE.STATUS, SE.COMMIT_COUNT, SE.READ_COUNT, SE.FILTER_COUNT, SE.WRITE_COUNT, SE.EXIT_CODE, SE.EXIT_MESSAGE, SE.READ_SKIP_COUNT, SE.WRITE_SKIP_COUNT, SE.PROCESS_SKIP_COUNT, SE.ROLLBACK_COUNT, SE.LAST_UPDATED, SE.VERSION, SE.CREATE_TIME, JE.JOB_EXECUTION_ID, JE.START_TIME, JE.END_TIME, JE.STATUS, JE.EXIT_CODE, JE.EXIT_MESSAGE, JE.CREATE_TIME, JE.LAST_UPDATED, JE.VERSION
+FROM BATCH_JOB_EXECUTION JE
+	JOIN BATCH_STEP_EXECUTION SE ON SE.JOB_EXECUTION_ID = JE.JOB_EXECUTION_ID
+WHERE JE.JOB_INSTANCE_ID = 163 AND SE.STEP_NAME = 'step1'
+ORDER BY SE.CREATE_TIME DESC, SE.STEP_EXECUTION_ID DESC
+ {executed in 4 msec}
+2024-10-07 15:53:25 [INFO ] [] [] SELECT COUNT(*)
+FROM BATCH_JOB_EXECUTION JE
+	JOIN BATCH_STEP_EXECUTION SE ON SE.JOB_EXECUTION_ID = JE.JOB_EXECUTION_ID
+WHERE JE.JOB_INSTANCE_ID = 163 AND SE.STEP_NAME = 'step1'
+ {executed in 3 msec}
+2024-10-07 15:53:25 [INFO ] [] [] update BATCH_STEP_EXECUTION_SEQ set ID = last_insert_id(ID + 1) limit 1
+ {executed in 2 msec}
+2024-10-07 15:53:25 [INFO ] [] [] select last_insert_id()
+ {executed in 1 msec}
+2024-10-07 15:53:25 [INFO ] [] [] INSERT INTO BATCH_STEP_EXECUTION(STEP_EXECUTION_ID, VERSION, STEP_NAME, JOB_EXECUTION_ID, START_TIME, END_TIME, STATUS, COMMIT_COUNT, READ_COUNT, FILTER_COUNT, WRITE_COUNT, EXIT_CODE, EXIT_MESSAGE, READ_SKIP_COUNT, WRITE_SKIP_COUNT, PROCESS_SKIP_COUNT, ROLLBACK_COUNT, LAST_UPDATED, CREATE_TIME)
+	VALUES (163, 0, 'step1', 163, NULL, NULL, 'STARTING', 0, 0, 0, 0, 'EXECUTING', '', 0, 0, 0, 0, '10/07/2024 15:53:25.713', '10/07/2024 15:53:25.712')
+ {executed in 4 msec}
+2024-10-07 15:53:25 [INFO ] [] [] INSERT INTO BATCH_STEP_EXECUTION_CONTEXT (SHORT_CONTEXT, SERIALIZED_CONTEXT, STEP_EXECUTION_ID)
+	VALUES('rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVzaG9sZHhwP0AAAAAAAAB3CAAAABAAAAAAeA==', NULL, 163)
+ {executed in 2 msec}
+2024-10-07 15:53:25 [INFO ] [] [] Executing step: [step1]
+2024-10-07 15:53:25 [INFO ] [] [] UPDATE BATCH_STEP_EXECUTION
+SET START_TIME = '10/07/2024 15:53:25.730', END_TIME = NULL, STATUS = 'STARTED', COMMIT_COUNT = 0, READ_COUNT = 0, FILTER_COUNT = 0, WRITE_COUNT = 0, EXIT_CODE = 'EXECUTING', EXIT_MESSAGE = '', VERSION = 1, READ_SKIP_COUNT = 0, PROCESS_SKIP_COUNT = 0, WRITE_SKIP_COUNT = 0, ROLLBACK_COUNT = 0, LAST_UPDATED = '10/07/2024 15:53:25.732'
+WHERE STEP_EXECUTION_ID = 163 AND VERSION = 0
+ {executed in 5 msec}
+2024-10-07 15:53:25 [INFO ] [] [] SELECT VERSION
+FROM BATCH_JOB_EXECUTION
+WHERE JOB_EXECUTION_ID=163
+ {executed in 2 msec}
+2024-10-07 15:53:25 [INFO ] [] [] UPDATE BATCH_STEP_EXECUTION_CONTEXT
+SET SHORT_CONTEXT = 'rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVzaG9sZHhwP0AAAAAAAAx3CAAAABAAAAADdAARYmF0Y2gudGFza2xldFR5cGV0AD1vcmcuc3ByaW5nZnJhbWV3b3JrLmJhdGNoLmNvcmUuc3RlcC5pdGVtLkNodW5rT3JpZW50ZWRUYXNrbGV0dAANYmF0Y2gudmVyc2lvbnQABTUuMS4ydAAOYmF0Y2guc3RlcFR5cGV0ADdvcmcuc3ByaW5nZnJhbWV3b3JrLmJhdGNoLmNvcmUuc3RlcC50YXNrbGV0LlRhc2tsZXRTdGVweA==', SERIALIZED_CONTEXT = NULL
+WHERE STEP_EXECUTION_ID = 163
+ {executed in 3 msec}
+2024-10-07 15:53:25 [INFO ] [] [] UPDATE BATCH_STEP_EXECUTION_CONTEXT
+SET SHORT_CONTEXT = 'rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVzaG9sZHhwP0AAAAAAAAx3CAAAABAAAAADdAARYmF0Y2gudGFza2xldFR5cGV0AD1vcmcuc3ByaW5nZnJhbWV3b3JrLmJhdGNoLmNvcmUuc3RlcC5pdGVtLkNodW5rT3JpZW50ZWRUYXNrbGV0dAANYmF0Y2gudmVyc2lvbnQABTUuMS4ydAAOYmF0Y2guc3RlcFR5cGV0ADdvcmcuc3ByaW5nZnJhbWV3b3JrLmJhdGNoLmNvcmUuc3RlcC50YXNrbGV0LlRhc2tsZXRTdGVweA==', SERIALIZED_CONTEXT = NULL
+WHERE STEP_EXECUTION_ID = 163
+ {executed in 2 msec}
+2024-10-07 15:53:25 [INFO ] [] [] UPDATE BATCH_STEP_EXECUTION
+SET START_TIME = '10/07/2024 15:53:25.730', END_TIME = NULL, STATUS = 'STARTED', COMMIT_COUNT = 1, READ_COUNT = 10, FILTER_COUNT = 0, WRITE_COUNT = 10, EXIT_CODE = 'EXECUTING', EXIT_MESSAGE = '', VERSION = 2, READ_SKIP_COUNT = 0, PROCESS_SKIP_COUNT = 0, WRITE_SKIP_COUNT = 0, ROLLBACK_COUNT = 0, LAST_UPDATED = '10/07/2024 15:53:25.759'
+WHERE STEP_EXECUTION_ID = 163 AND VERSION = 1
+ {executed in 3 msec}
+2024-10-07 15:53:25 [INFO ] [] [] SELECT VERSION
+FROM BATCH_JOB_EXECUTION
+WHERE JOB_EXECUTION_ID=163
+ {executed in 1 msec}
+2024-10-07 15:53:25 [INFO ] [] [] UPDATE BATCH_STEP_EXECUTION_CONTEXT
+SET SHORT_CONTEXT = 'rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVzaG9sZHhwP0AAAAAAAAx3CAAAABAAAAADdAARYmF0Y2gudGFza2xldFR5cGV0AD1vcmcuc3ByaW5nZnJhbWV3b3JrLmJhdGNoLmNvcmUuc3RlcC5pdGVtLkNodW5rT3JpZW50ZWRUYXNrbGV0dAANYmF0Y2gudmVyc2lvbnQABTUuMS4ydAAOYmF0Y2guc3RlcFR5cGV0ADdvcmcuc3ByaW5nZnJhbWV3b3JrLmJhdGNoLmNvcmUuc3RlcC50YXNrbGV0LlRhc2tsZXRTdGVweA==', SERIALIZED_CONTEXT = NULL
+WHERE STEP_EXECUTION_ID = 163
+ {executed in 1 msec}
+2024-10-07 15:53:25 [INFO ] [] [] UPDATE BATCH_STEP_EXECUTION
+SET START_TIME = '10/07/2024 15:53:25.730', END_TIME = NULL, STATUS = 'STARTED', COMMIT_COUNT = 2, READ_COUNT = 10, FILTER_COUNT = 0, WRITE_COUNT = 10, EXIT_CODE = 'EXECUTING', EXIT_MESSAGE = '', VERSION = 3, READ_SKIP_COUNT = 0, PROCESS_SKIP_COUNT = 0, WRITE_SKIP_COUNT = 0, ROLLBACK_COUNT = 0, LAST_UPDATED = '10/07/2024 15:53:25.769'
+WHERE STEP_EXECUTION_ID = 163 AND VERSION = 2
+ {executed in 2 msec}
+2024-10-07 15:53:25 [INFO ] [] [] SELECT VERSION
+FROM BATCH_JOB_EXECUTION
+WHERE JOB_EXECUTION_ID=163
+ {executed in 2 msec}
+2024-10-07 15:53:25 [INFO ] [] [] UPDATE BATCH_STEP_EXECUTION_CONTEXT
+SET SHORT_CONTEXT = 'rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVzaG9sZHhwP0AAAAAAAAx3CAAAABAAAAADdAARYmF0Y2gudGFza2xldFR5cGV0AD1vcmcuc3ByaW5nZnJhbWV3b3JrLmJhdGNoLmNvcmUuc3RlcC5pdGVtLkNodW5rT3JpZW50ZWRUYXNrbGV0dAANYmF0Y2gudmVyc2lvbnQABTUuMS4ydAAOYmF0Y2guc3RlcFR5cGV0ADdvcmcuc3ByaW5nZnJhbWV3b3JrLmJhdGNoLmNvcmUuc3RlcC50YXNrbGV0LlRhc2tsZXRTdGVweA==', SERIALIZED_CONTEXT = NULL
+WHERE STEP_EXECUTION_ID = 163
+ {executed in 2 msec}
+2024-10-07 15:53:25 [INFO ] [] [] Step: [step1] executed in 51ms
+2024-10-07 15:53:25 [INFO ] [] [] UPDATE BATCH_STEP_EXECUTION
+SET START_TIME = '10/07/2024 15:53:25.730', END_TIME = '10/07/2024 15:53:25.782', STATUS = 'COMPLETED', COMMIT_COUNT = 2, READ_COUNT = 10, FILTER_COUNT = 0, WRITE_COUNT = 10, EXIT_CODE = 'COMPLETED', EXIT_MESSAGE = '', VERSION = 4, READ_SKIP_COUNT = 0, PROCESS_SKIP_COUNT = 0, WRITE_SKIP_COUNT = 0, ROLLBACK_COUNT = 0, LAST_UPDATED = '10/07/2024 15:53:25.782'
+WHERE STEP_EXECUTION_ID = 163 AND VERSION = 3
+ {executed in 3 msec}
+2024-10-07 15:53:25 [INFO ] [] [] SELECT VERSION
+FROM BATCH_JOB_EXECUTION
+WHERE JOB_EXECUTION_ID=163
+ {executed in 1 msec}
+2024-10-07 15:53:25 [INFO ] [] [] UPDATE BATCH_JOB_EXECUTION_CONTEXT
+SET SHORT_CONTEXT = 'rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVzaG9sZHhwP0AAAAAAAAx3CAAAABAAAAABdAANYmF0Y2gudmVyc2lvbnQABTUuMS4yeA==', SERIALIZED_CONTEXT = NULL
+WHERE JOB_EXECUTION_ID = 163
+ {executed in 1 msec}
+2024-10-07 15:53:25 [INFO ] [] [] SELECT VERSION
+FROM BATCH_JOB_EXECUTION
+WHERE JOB_EXECUTION_ID=163
+ {executed in 2 msec}
+2024-10-07 15:53:25 [INFO ] [] [] SELECT COUNT(*)
+FROM BATCH_JOB_EXECUTION
+WHERE JOB_EXECUTION_ID = 163
+ {executed in 1 msec}
+2024-10-07 15:53:25 [INFO ] [] [] UPDATE BATCH_JOB_EXECUTION
+SET START_TIME = '10/07/2024 15:53:25.685', END_TIME = '10/07/2024 15:53:25.795',  STATUS = 'COMPLETED', EXIT_CODE = 'COMPLETED', EXIT_MESSAGE = '', VERSION = 2, CREATE_TIME = '10/07/2024 15:53:25.645', LAST_UPDATED = '10/07/2024 15:53:25.795'
+WHERE JOB_EXECUTION_ID = 163 AND VERSION = 1
+ {executed in 2 msec}
+2024-10-07 15:53:25 [INFO ] [] [] Job: [SimpleJob: [name=batchJob]] completed with the following parameters: [{'UUID':'{value=810af702-aeab-4c74-baf3-8da47a153dbd, type=class java.lang.String, identifying=true}','run.id':'{value=1, type=class java.lang.Long, identifying=true}'}] and the following status: [COMPLETED] in 109ms
+2024-10-07 15:53:25 [INFO ] [] [] SELECT JOB_INSTANCE_ID, JOB_NAME
+FROM BATCH_JOB_INSTANCE
+WHERE JOB_NAME = 'batchJob'
+ and JOB_KEY = '0b4e0e435791be75d531d86960bb5095'
+ {executed in 1 msec}
+2024-10-07 15:53:25 [INFO ] [] [] SELECT JOB_INSTANCE_ID, JOB_NAME
+FROM BATCH_JOB_INSTANCE
+WHERE JOB_NAME = 'batchJob'
+ and JOB_KEY = '0b4e0e435791be75d531d86960bb5095'
+ {executed in 1 msec}
+2024-10-07 15:53:25 [INFO ] [] [] SELECT JOB_INSTANCE_ID, JOB_NAME
+FROM BATCH_JOB_INSTANCE
+WHERE JOB_NAME = 'batchJob'
+ and JOB_KEY = '0b4e0e435791be75d531d86960bb5095'
+ {executed in 1 msec}
+2024-10-07 15:53:25 [INFO ] [] [] update BATCH_JOB_SEQ set ID = last_insert_id(ID + 1) limit 1
+ {executed in 1 msec}
+2024-10-07 15:53:25 [INFO ] [] [] select last_insert_id()
+ {executed in 0 msec}
+2024-10-07 15:53:25 [INFO ] [] [] INSERT INTO BATCH_JOB_INSTANCE(JOB_INSTANCE_ID, JOB_NAME, JOB_KEY, VERSION)
+	VALUES (164, 'batchJob', '0b4e0e435791be75d531d86960bb5095', 0)
+ {executed in 1 msec}
+2024-10-07 15:53:25 [INFO ] [] [] update BATCH_JOB_EXECUTION_SEQ set ID = last_insert_id(ID + 1) limit 1
+ {executed in 1 msec}
+2024-10-07 15:53:25 [INFO ] [] [] select last_insert_id()
+ {executed in 0 msec}
+2024-10-07 15:53:25 [INFO ] [] [] INSERT INTO BATCH_JOB_EXECUTION(JOB_EXECUTION_ID, JOB_INSTANCE_ID, START_TIME, END_TIME, STATUS, EXIT_CODE, EXIT_MESSAGE, VERSION, CREATE_TIME, LAST_UPDATED)
+	VALUES (164, 164, NULL, NULL, 'STARTING', 'UNKNOWN', '', 0, '10/07/2024 15:53:25.818', '10/07/2024 15:53:25.818')
+ {executed in 2 msec}
+2024-10-07 15:53:25 [INFO ] [] [] batching 1 statements:
+1:  INSERT INTO BATCH_JOB_EXECUTION_PARAMS(JOB_EXECUTION_ID, PARAMETER_NAME, PARAMETER_TYPE, PARAMETER_VALUE, IDENTIFYING)
+	VALUES (164, 'UUID', 'java.lang.String', 'ccbed2fd-55cc-4759-bd37-e12fab62c848', 'Y')
+ {executed in 2 msec}
+2024-10-07 15:53:25 [INFO ] [] [] INSERT INTO BATCH_JOB_EXECUTION_CONTEXT (SHORT_CONTEXT, SERIALIZED_CONTEXT, JOB_EXECUTION_ID)
+	VALUES('rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVzaG9sZHhwP0AAAAAAAAB3CAAAABAAAAAAeA==', NULL, 164)
+ {executed in 1 msec}
+2024-10-07 15:53:25 [INFO ] [] [] Job: [SimpleJob: [name=batchJob]] launched with the following parameters: [{'UUID':'{value=ccbed2fd-55cc-4759-bd37-e12fab62c848, type=class java.lang.String, identifying=true}'}]
+2024-10-07 15:53:25 [INFO ] [] [] SELECT VERSION
+FROM BATCH_JOB_EXECUTION
+WHERE JOB_EXECUTION_ID=164
+ {executed in 1 msec}
+2024-10-07 15:53:25 [INFO ] [] [] SELECT COUNT(*)
+FROM BATCH_JOB_EXECUTION
+WHERE JOB_EXECUTION_ID = 164
+ {executed in 1 msec}
+2024-10-07 15:53:25 [INFO ] [] [] UPDATE BATCH_JOB_EXECUTION
+SET START_TIME = '10/07/2024 15:53:25.830', END_TIME = NULL,  STATUS = 'STARTED', EXIT_CODE = 'UNKNOWN', EXIT_MESSAGE = '', VERSION = 1, CREATE_TIME = '10/07/2024 15:53:25.818', LAST_UPDATED = '10/07/2024 15:53:25.830'
+WHERE JOB_EXECUTION_ID = 164 AND VERSION = 0
+ {executed in 2 msec}
+2024-10-07 15:53:25 [INFO ] [] [] SELECT SE.STEP_EXECUTION_ID, SE.STEP_NAME, SE.START_TIME, SE.END_TIME, SE.STATUS, SE.COMMIT_COUNT, SE.READ_COUNT, SE.FILTER_COUNT, SE.WRITE_COUNT, SE.EXIT_CODE, SE.EXIT_MESSAGE, SE.READ_SKIP_COUNT, SE.WRITE_SKIP_COUNT, SE.PROCESS_SKIP_COUNT, SE.ROLLBACK_COUNT, SE.LAST_UPDATED, SE.VERSION, SE.CREATE_TIME, JE.JOB_EXECUTION_ID, JE.START_TIME, JE.END_TIME, JE.STATUS, JE.EXIT_CODE, JE.EXIT_MESSAGE, JE.CREATE_TIME, JE.LAST_UPDATED, JE.VERSION
+FROM BATCH_JOB_EXECUTION JE
+	JOIN BATCH_STEP_EXECUTION SE ON SE.JOB_EXECUTION_ID = JE.JOB_EXECUTION_ID
+WHERE JE.JOB_INSTANCE_ID = 164 AND SE.STEP_NAME = 'step1'
+ORDER BY SE.CREATE_TIME DESC, SE.STEP_EXECUTION_ID DESC
+ {executed in 3 msec}
+2024-10-07 15:53:25 [INFO ] [] [] SELECT COUNT(*)
+FROM BATCH_JOB_EXECUTION JE
+	JOIN BATCH_STEP_EXECUTION SE ON SE.JOB_EXECUTION_ID = JE.JOB_EXECUTION_ID
+WHERE JE.JOB_INSTANCE_ID = 164 AND SE.STEP_NAME = 'step1'
+ {executed in 2 msec}
+2024-10-07 15:53:25 [INFO ] [] [] update BATCH_STEP_EXECUTION_SEQ set ID = last_insert_id(ID + 1) limit 1
+ {executed in 1 msec}
+2024-10-07 15:53:25 [INFO ] [] [] select last_insert_id()
+ {executed in 1 msec}
+2024-10-07 15:53:25 [INFO ] [] [] INSERT INTO BATCH_STEP_EXECUTION(STEP_EXECUTION_ID, VERSION, STEP_NAME, JOB_EXECUTION_ID, START_TIME, END_TIME, STATUS, COMMIT_COUNT, READ_COUNT, FILTER_COUNT, WRITE_COUNT, EXIT_CODE, EXIT_MESSAGE, READ_SKIP_COUNT, WRITE_SKIP_COUNT, PROCESS_SKIP_COUNT, ROLLBACK_COUNT, LAST_UPDATED, CREATE_TIME)
+	VALUES (164, 0, 'step1', 164, NULL, NULL, 'STARTING', 0, 0, 0, 0, 'EXECUTING', '', 0, 0, 0, 0, '10/07/2024 15:53:25.846', '10/07/2024 15:53:25.846')
+ {executed in 3 msec}
+2024-10-07 15:53:25 [INFO ] [] [] INSERT INTO BATCH_STEP_EXECUTION_CONTEXT (SHORT_CONTEXT, SERIALIZED_CONTEXT, STEP_EXECUTION_ID)
+	VALUES('rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVzaG9sZHhwP0AAAAAAAAB3CAAAABAAAAAAeA==', NULL, 164)
+ {executed in 1 msec}
+2024-10-07 15:53:25 [INFO ] [] [] Executing step: [step1]
+2024-10-07 15:53:25 [INFO ] [] [] UPDATE BATCH_STEP_EXECUTION
+SET START_TIME = '10/07/2024 15:53:25.857', END_TIME = NULL, STATUS = 'STARTED', COMMIT_COUNT = 0, READ_COUNT = 0, FILTER_COUNT = 0, WRITE_COUNT = 0, EXIT_CODE = 'EXECUTING', EXIT_MESSAGE = '', VERSION = 1, READ_SKIP_COUNT = 0, PROCESS_SKIP_COUNT = 0, WRITE_SKIP_COUNT = 0, ROLLBACK_COUNT = 0, LAST_UPDATED = '10/07/2024 15:53:25.858'
+WHERE STEP_EXECUTION_ID = 164 AND VERSION = 0
+ {executed in 3 msec}
+2024-10-07 15:53:25 [INFO ] [] [] SELECT VERSION
+FROM BATCH_JOB_EXECUTION
+WHERE JOB_EXECUTION_ID=164
+ {executed in 1 msec}
+2024-10-07 15:53:25 [INFO ] [] [] UPDATE BATCH_STEP_EXECUTION_CONTEXT
+SET SHORT_CONTEXT = 'rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVzaG9sZHhwP0AAAAAAAAx3CAAAABAAAAADdAARYmF0Y2gudGFza2xldFR5cGV0AD1vcmcuc3ByaW5nZnJhbWV3b3JrLmJhdGNoLmNvcmUuc3RlcC5pdGVtLkNodW5rT3JpZW50ZWRUYXNrbGV0dAANYmF0Y2gudmVyc2lvbnQABTUuMS4ydAAOYmF0Y2guc3RlcFR5cGV0ADdvcmcuc3ByaW5nZnJhbWV3b3JrLmJhdGNoLmNvcmUuc3RlcC50YXNrbGV0LlRhc2tsZXRTdGVweA==', SERIALIZED_CONTEXT = NULL
+WHERE STEP_EXECUTION_ID = 164
+ {executed in 2 msec}
+2024-10-07 15:53:25 [INFO ] [] [] UPDATE BATCH_STEP_EXECUTION_CONTEXT
+SET SHORT_CONTEXT = 'rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVzaG9sZHhwP0AAAAAAAAx3CAAAABAAAAADdAARYmF0Y2gudGFza2xldFR5cGV0AD1vcmcuc3ByaW5nZnJhbWV3b3JrLmJhdGNoLmNvcmUuc3RlcC5pdGVtLkNodW5rT3JpZW50ZWRUYXNrbGV0dAANYmF0Y2gudmVyc2lvbnQABTUuMS4ydAAOYmF0Y2guc3RlcFR5cGV0ADdvcmcuc3ByaW5nZnJhbWV3b3JrLmJhdGNoLmNvcmUuc3RlcC50YXNrbGV0LlRhc2tsZXRTdGVweA==', SERIALIZED_CONTEXT = NULL
+WHERE STEP_EXECUTION_ID = 164
+ {executed in 1 msec}
+2024-10-07 15:53:25 [INFO ] [] [] UPDATE BATCH_STEP_EXECUTION
+SET START_TIME = '10/07/2024 15:53:25.857', END_TIME = NULL, STATUS = 'STARTED', COMMIT_COUNT = 1, READ_COUNT = 0, FILTER_COUNT = 0, WRITE_COUNT = 0, EXIT_CODE = 'EXECUTING', EXIT_MESSAGE = '', VERSION = 2, READ_SKIP_COUNT = 0, PROCESS_SKIP_COUNT = 0, WRITE_SKIP_COUNT = 0, ROLLBACK_COUNT = 0, LAST_UPDATED = '10/07/2024 15:53:25.872'
+WHERE STEP_EXECUTION_ID = 164 AND VERSION = 1
+ {executed in 2 msec}
+2024-10-07 15:53:25 [INFO ] [] [] SELECT VERSION
+FROM BATCH_JOB_EXECUTION
+WHERE JOB_EXECUTION_ID=164
+ {executed in 1 msec}
+2024-10-07 15:53:25 [INFO ] [] [] UPDATE BATCH_STEP_EXECUTION_CONTEXT
+SET SHORT_CONTEXT = 'rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVzaG9sZHhwP0AAAAAAAAx3CAAAABAAAAADdAARYmF0Y2gudGFza2xldFR5cGV0AD1vcmcuc3ByaW5nZnJhbWV3b3JrLmJhdGNoLmNvcmUuc3RlcC5pdGVtLkNodW5rT3JpZW50ZWRUYXNrbGV0dAANYmF0Y2gudmVyc2lvbnQABTUuMS4ydAAOYmF0Y2guc3RlcFR5cGV0ADdvcmcuc3ByaW5nZnJhbWV3b3JrLmJhdGNoLmNvcmUuc3RlcC50YXNrbGV0LlRhc2tsZXRTdGVweA==', SERIALIZED_CONTEXT = NULL
+WHERE STEP_EXECUTION_ID = 164
+ {executed in 1 msec}
+2024-10-07 15:53:25 [INFO ] [] [] Step: [step1] executed in 25ms
+2024-10-07 15:53:25 [INFO ] [] [] UPDATE BATCH_STEP_EXECUTION
+SET START_TIME = '10/07/2024 15:53:25.857', END_TIME = '10/07/2024 15:53:25.882', STATUS = 'COMPLETED', COMMIT_COUNT = 1, READ_COUNT = 0, FILTER_COUNT = 0, WRITE_COUNT = 0, EXIT_CODE = 'COMPLETED', EXIT_MESSAGE = '', VERSION = 3, READ_SKIP_COUNT = 0, PROCESS_SKIP_COUNT = 0, WRITE_SKIP_COUNT = 0, ROLLBACK_COUNT = 0, LAST_UPDATED = '10/07/2024 15:53:25.883'
+WHERE STEP_EXECUTION_ID = 164 AND VERSION = 2
+ {executed in 3 msec}
+2024-10-07 15:53:25 [INFO ] [] [] SELECT VERSION
+FROM BATCH_JOB_EXECUTION
+WHERE JOB_EXECUTION_ID=164
+ {executed in 2 msec}
+2024-10-07 15:53:25 [INFO ] [] [] UPDATE BATCH_JOB_EXECUTION_CONTEXT
+SET SHORT_CONTEXT = 'rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVzaG9sZHhwP0AAAAAAAAx3CAAAABAAAAABdAANYmF0Y2gudmVyc2lvbnQABTUuMS4yeA==', SERIALIZED_CONTEXT = NULL
+WHERE JOB_EXECUTION_ID = 164
+ {executed in 3 msec}
+2024-10-07 15:53:25 [INFO ] [] [] SELECT VERSION
+FROM BATCH_JOB_EXECUTION
+WHERE JOB_EXECUTION_ID=164
+ {executed in 1 msec}
+2024-10-07 15:53:25 [INFO ] [] [] SELECT COUNT(*)
+FROM BATCH_JOB_EXECUTION
+WHERE JOB_EXECUTION_ID = 164
+ {executed in 2 msec}
+2024-10-07 15:53:25 [INFO ] [] [] UPDATE BATCH_JOB_EXECUTION
+SET START_TIME = '10/07/2024 15:53:25.830', END_TIME = '10/07/2024 15:53:25.899',  STATUS = 'COMPLETED', EXIT_CODE = 'COMPLETED', EXIT_MESSAGE = '', VERSION = 2, CREATE_TIME = '10/07/2024 15:53:25.818', LAST_UPDATED = '10/07/2024 15:53:25.900'
+WHERE JOB_EXECUTION_ID = 164 AND VERSION = 1
+ {executed in 3 msec}
+2024-10-07 15:53:25 [INFO ] [] [] Job: [SimpleJob: [name=batchJob]] completed with the following parameters: [{'UUID':'{value=ccbed2fd-55cc-4759-bd37-e12fab62c848, type=class java.lang.String, identifying=true}'}] and the following status: [COMPLETED] in 68ms
+2024-10-07 15:53:26 [INFO ] [] [] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-07 15:53:26 [INFO ] [] [] Initializing Servlet 'dispatcherServlet'
+2024-10-07 15:53:26 [INFO ] [] [] Completed initialization in 1 ms

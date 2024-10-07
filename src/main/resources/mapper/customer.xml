@@ -1,0 +1,14 @@
+<?mapper version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="customer">
+
+    <select id="findCustomerPaging" resultType="com.project.springbatch.web.model.CustomerVO">
+        select * from customer ORDER BY id ASC LIMIT #{_skiprows}, #{_pagesize}
+    </select>
+
+    <insert id="insertCustomer2" parameterType="map">
+        INSERT INTO customer2 (first_name, last_name, birthdate)
+        VALUES (#{customer.first_name}, #{customer.last_name}, #{customer.birthdate})
+    </insert>
+</mapper>

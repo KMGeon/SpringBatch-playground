@@ -1,46 +1,41 @@
 <configuration>
-    <property name="logPath" value="logs" />
+
+    <property name="logPath" value="logs"/>
 
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <filter class="com.project.springbatch.LogbackFilter"/>
         <layout class="ch.qos.logback.classic.PatternLayout">
             <Pattern>
-                %d{yyyy-MM-dd HH:mm:ss} [%-5level] [%X{transactionId}] %msg%n
+                %d{yyyy-MM-dd HH:mm:ss} [%-5level] [%X{transactionId}] [%X{request_id}] %msg%n
             </Pattern>
         </layout>
     </appender>
 
     <appender name="FILE-AUDIT" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>
-            ${logPath}/tbnws_admin_back.log
-        </file>
-
+        <file>${logPath}/test.log</file>
         <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
             <Pattern>
-                %d{yyyy-MM-dd HH:mm:ss} [%-5level] [%X{transactionId}] %msg%n
+                %d{yyyy-MM-dd HH:mm:ss} [%-5level] [%X{transactionId}] [%X{request_id}] %msg%n
             </Pattern>
         </encoder>
-
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>
-                ${logPath}/archived/spring.log.%d{yyyy-MM-dd}.%i
-            </fileNamePattern>
+            <fileNamePattern>${logPath}/archived/test.log.%d{yyyy-MM-dd}.%i</fileNamePattern>
             <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
-                <maxFileSize>
-                    50MB
-                </maxFileSize>
+                <maxFileSize>50MB</maxFileSize>
             </timeBasedFileNamingAndTriggeringPolicy>
         </rollingPolicy>
     </appender>
 
     <root level="info">
-        <appender-ref ref="FILE-AUDIT" />
-        <appender-ref ref="STDOUT" />
+        <appender-ref ref="FILE-AUDIT"/>
+        <appender-ref ref="STDOUT"/>
     </root>
 
-    <logger name="jdbc.sqlonly"        level="OFF"/>
-    <logger name="jdbc.sqltiming"      level="INFO"/>
-    <logger name="jdbc.audit"          level="OFF"/>
-    <logger name="jdbc.resultset"      level="OFF"/>
+    <logger name="jdbc.sqlonly" level="OFF"/>
+    <logger name="jdbc.sqltiming" level="INFO"/>
+    <logger name="jdbc.audit" level="OFF"/>
+    <logger name="jdbc.resultset" level="OFF"/>
     <logger name="jdbc.resultsettable" level="OFF"/>
-    <logger name="jdbc.connection"     level="OFF"/>
+    <logger name="jdbc.connection" level="OFF"/>
+
 </configuration>
