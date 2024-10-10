@@ -1,16 +1,16 @@
-package com.project.springbatch.step9.CompositeItemProcessor;
-
-import org.springframework.batch.item.ItemProcessor;
-import org.springframework.stereotype.Component;
-
-@Component
-public class CustomItemProcessor2 implements ItemProcessor<String, String> {
-
-    int cnt = 0;
-
-    @Override
-    public String process(String item) throws Exception {
-        cnt++;
-        return item+"[Processor2]";
-    }
-}
+//package com.project.springbatch.step9.CompositeItemProcessor;
+//
+//import org.springframework.batch.item.ItemProcessor;
+//import org.springframework.stereotype.Component;
+//
+//@Component
+//public class CustomItemProcessor2 implements ItemProcessor<String, String> {
+//
+//    int cnt = 0;
+//
+//    @Override
+//    public String process(String item) throws Exception {
+//        cnt++;
+//        return item+"[Processor2]";
+//    }
+//}
