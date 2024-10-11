@@ -1,4 +1,4 @@
-package com.project.springbatch.step10.retry;
+package com.project.springbatch.step10.retry.api;
 
 public class RetryTestExcedption extends RuntimeException{
     public RetryTestExcedption() {

@@ -32,8 +32,6 @@ import javax.sql.DataSource;
 @EnableConfigurationProperties(BatchProperties.class)
 // @EnableBatchProcessing과 DefaultBatchConfiguration를 함께 사용하면 안 된다.
 public class BatchConfig{
-
-
     /**
      * 조건부로 빈을 등록을 한다.
      * @ConditionalOnMissingBean : 이 어노테이션은 해당 타입의 빈이 이미 존재하지 않을 때만 빈을 등록하도록 한다..

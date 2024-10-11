@@ -10,4 +10,13 @@ public class CustomerVO {
     private String first_name;
     private String last_name;
     private String birthdate;
+
+    public CustomerVO(String first_name) {
+        this.first_name = first_name;
+    }
+
+    public CustomerVO(String first_name, String last_name) {
+        this.first_name = first_name;
+        this.last_name = last_name;
+    }
 }
