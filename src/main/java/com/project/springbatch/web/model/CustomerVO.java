@@ -1,10 +1,12 @@
 package com.project.springbatch.web.model;//package com.project.springbatch.domain;
 
-import lombok.Data;
-import lombok.ToString;
+import lombok.*;
 
 @Data
 @ToString
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class CustomerVO {
     private Long id;
     private String first_name;
