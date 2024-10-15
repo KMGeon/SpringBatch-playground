@@ -38,7 +38,22 @@ public class CustomerController {
     }
 
     @GetMapping("/test")
-    public List<CustomerVO> selectCustomerAll() {
+    public List<CustomerVO>  selectCustomerAll() {
         return customerService.selectCustomerList();
+    }
+
+    @GetMapping("/tset1")
+    public String runT1() {
+        try {
+            Job job = jobRegistry.getJob("apiJob");
+            JobParameters jobParameters = new JobParametersBuilder()
+                    .addLong("time", System.currentTimeMillis())
+                    .toJobParameters();
+
+            jobLauncher.run(job, jobParameters);
+            return " job has been initiated.";
+        } catch (Exception e) {
+            return "Error occurred while starting the job: " + e.getMessage();
+        }
     }
 }

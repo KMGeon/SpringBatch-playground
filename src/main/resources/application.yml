@@ -9,8 +9,13 @@ spring:
     jdbc:
       initialize-schema: always
     job:
-      name: 'batchJob'
+#      name: ${job.name:NONE}
+      name: "batchJob"
       enabled: true
+
+
+
+
 management:
   info:
     java:
@@ -87,5 +92,3 @@ info:
 #    name: hello-actuator
 #    company: yh
 #
-#
-## 수정하고
